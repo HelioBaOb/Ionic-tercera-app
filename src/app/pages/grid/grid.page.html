@@ -1,0 +1,25 @@
+<app-header headerTitle="Grid"></app-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid fixed> <!-- fixed: ayuda a tener el grid con padding a los lados, ayudando a que se centre el contenido -->
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1]">
+        <ion-card>
+          <ion-img src="/assets/stan-lee.jpg"></ion-img>
+        </ion-card>
+
+        <ion-card-header>
+          <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+          <ion-card-title>Awesome Title</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eveniet voluptatum at expedita? Quia dolorem consequuntur dolores nobis minima, perferendis quo eligendi iste voluptatem quod natus harum veniam, placeat optio.
+        </ion-card-content>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
