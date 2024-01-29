@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>List Reorder</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="disable = !disable">Toggle</ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-list>
+
+    <ion-reorder-group disabled="{{ disable }}" (ionItemReorder)="doReorder($event)">
+      <ion-item *ngFor="let super of superheroes">
+        <ion-icon class="{{ super.class }}" slot="start" name="{{ super.icon }}"></ion-icon>
+        <ion-label>{{ super.name }}</ion-label>
+        <ion-reorder slot="end">
+          <ion-icon name="unlink-outline"></ion-icon>
+        </ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+
+  </ion-list>
+
+</ion-content>
